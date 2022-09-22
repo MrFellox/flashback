@@ -27,7 +27,7 @@ try:
 
     with console.status('Reading images...'):
         for filename in os.listdir(str(path.resolve())):
-            if filename.endswith(('.mov', '.mp4', '.mp3', '.heic')):
+            if filename.lower().endswith(('.mov', '.mp4', '.mp3', '.heic')):
                 continue
 
             img = ImageClip(os.path.join(str(path.resolve()), filename), duration = duration)
